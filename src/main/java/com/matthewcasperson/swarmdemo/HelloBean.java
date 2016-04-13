@@ -13,7 +13,7 @@ import javax.inject.Singleton;
 @Named("myBean")
 public class HelloBean {
 
-    public String sayHello(@Header("name") final String name, @Simple("${sys.user.country}") String country) {
+    public String sayHello(@Header("name") final String name, @Simple("${sys.user.country}") final String country) {
         return "Hello " + name + ", how are you? You are from: " + country;
     }
 
